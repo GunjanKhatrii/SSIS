@@ -94,12 +94,8 @@ flowchart TB
 - **Error Output**: Errors are redirected to an output path for further review.
 - **Flat File Destination**: Failed rows are saved for analysis.
 
-## 6. Deployment and Scheduling
 
-- **Deployment**: Deploy SSIS packages using Visual Studio to the SSIS Catalog.
-- **Scheduling**: Use SQL Server Agent to schedule packages, ensuring they run automatically at set intervals.
-
-## 7. Accounting/Finance Example
+## 6. Accounting/Finance Project
 
 To demonstrate the concepts covered in this document, let's set up an accounting/finance example:
 
@@ -143,27 +139,6 @@ The dataset will consist of the following:
      - `contact_name` (VARCHAR)
      - `phone` (VARCHAR)
 
-### ETL Process
-- **Extract**: Retrieve financial transactions from the SQL Server, exchange rates from the Excel file, and supplier data from the CSV file.
-- **Transform**: Use lookups to enrich transaction data with customer and supplier details. Convert transaction amounts to a common currency using the exchange rates from the Excel file.
-- **Load**: Store the transformed data into a data warehouse for financial analysis.
 
-### SSIS Package Workflow
-- **Control Flow**: 
-  - Start with an **Execute SQL Task** to create staging tables.
-  - Use a **Data Flow Task** to extract and transform the data.
-  - Include a **Script Task** to apply any custom transformations.
-  - Add a **File System Task** to archive processed files.
-- **Data Flow**:
-  - Extract data from SQL Server, Excel, and CSV sources.
-  - Perform transformations such as lookups to combine customer and transaction data.
-  - Convert currency values using data from the Excel file.
-  - Load the transformed data into a data warehouse for further analysis.
 
-This accounting/finance example will allow you to demonstrate a complete ETL process using SSIS, including data extraction from multiple sources, performing various transformations, and loading data into a central repository for analysis.
 
-## Conclusion
-
-In this document, we covered the foundational concepts of SSIS, including the ETL process, Control Flow, Data Flow, connections, error handling, and deployment. Understanding these concepts is crucial for effectively using SSIS to manage data integration tasks. With this knowledge, you are now ready to start building your own SSIS packages, automating data workflows, and leveraging the powerful features of SSIS for data transformation and movement.
-
-To continue learning, consider exploring more advanced SSIS features like parameterization, package configurations, and performance tuning. Keep practicing, and soon you'll be able to create more complex ETL solutions to meet diverse data integration needs.
