@@ -1,4 +1,4 @@
-#Accounting/Finance Project
+# Accounting/Finance Project
 
 To demonstrate the concepts covered in this document, let's set up an accounting/finance example:
 
